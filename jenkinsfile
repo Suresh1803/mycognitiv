@@ -12,7 +12,7 @@ pipeline {
     stage ('Deploy') {
       steps {
         script {
-         deploy adapters: [tomcat9(credentialsId: 'tomcatId', path:'', url: 'http://localhost:8080')], contextPath:'', onFailure: false, war:'**/target/springmvc.war' 
+        deploy adapters: [tomcat9(credentialsId: '9a5a8882-d3e7-4751-baef-bea6e415142f', path: '', url: 'http://localhost:8080')], contextPath: null, war: '**/*.war'
         }
       }
     }
